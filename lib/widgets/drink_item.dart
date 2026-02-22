@@ -1,3 +1,4 @@
+import 'package:coffe_app/pages/drink_details.dart';
 import 'package:flutter/material.dart';
 
 class DrinkItem extends StatelessWidget {
@@ -80,7 +81,12 @@ class DrinkItem extends StatelessWidget {
           bottom: 40,
           child: IconButton(
             style: IconButton.styleFrom(side: BorderSide(color: Colors.black)),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (c) => DrinkDetails()),
+              );
+            },
             icon: Icon(Icons.arrow_forward),
           ),
         ),
